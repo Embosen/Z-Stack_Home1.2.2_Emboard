@@ -1,0 +1,1552 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V10.10.1.4655 for 8051              16/Jul/2025  15:25:34
+// Copyright 2004-2017 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\Source\zcl_samplelight_data.c
+//    Command line       =  
+//        -f C:\Users\bobzh\AppData\Local\Temp\EW4B91.tmp
+//        (Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\Source\zcl_samplelight_data.c
+//        -D SECURE=1 -D TC_LINKKEY_JOIN -D xNV_INIT -D xNV_RESTORE -D
+//        xPOWER_SAVING -D NWK_AUTO_POLL -D xHOLD_AUTO_START -D ZTOOL_P2 -D
+//        MT_TASK -D MT_APP_FUNC -D MT_SYS_FUNC -D MT_ZDO_FUNC -D
+//        LCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE -D ZCL_READ -D
+//        ZCL_WRITE -D ZCL_REPORT -D xZCL_EZMODE -D ZCL_BASIC -D ZCL_IDENTIFY
+//        -D ZCL_ON_OFF -D ZCL_SCENES -D ZCL_GROUPS -D xZCL_LEVEL_CTRL -D
+//        ZCL_DIAGNOSTIC -D FEATURE_SYSTEM_STATS -lC
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\EndDeviceEB\List
+//        -lA
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\EndDeviceEB\List
+//        --diag_suppress Pe001,Pa010 -o
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\EndDeviceEB\Obj
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 16 -f
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+//        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+//        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+//        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000)
+//        -f
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg
+//        (-DZCL_READ -DZCL_WRITE -DZCL_REPORT -DZCL_ON_OFF) -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\Source\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\Source\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\ZMain\TI2530DB\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\hal\include\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\mac\include\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\mt\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\osal\include\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\services\saddr\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\services\sdata\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\stack\af\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\stack\sec\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\stack\sys\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\stack\zcl\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\zmac\
+//        -I
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+//        -Ohz --require_prototypes)
+//    Locale             =  Chinese (Simplified)_China.936
+//    List file          =  
+//        Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\EndDeviceEB\List\zcl_samplelight_data.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME zcl_samplelight_data
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__register_banks", "*"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC zclSampleLight_Attrs
+        PUBLIC zclSampleLight_DateCode
+        PUBLIC zclSampleLight_DeviceEnable
+        PUBLIC zclSampleLight_HWRevision
+        PUBLIC zclSampleLight_IdentifyTime
+        PUBLIC zclSampleLight_InClusterList
+        PUBLIC zclSampleLight_LocationDescription
+        PUBLIC zclSampleLight_ManufacturerName
+        PUBLIC zclSampleLight_ModelId
+        PUBLIC zclSampleLight_NumAttributes
+        PUBLIC zclSampleLight_OnOff
+        PUBLIC zclSampleLight_OutClusterList
+        PUBLIC zclSampleLight_PhysicalEnvironment
+        PUBLIC zclSampleLight_PowerSource
+        PUBLIC zclSampleLight_RedOnOff
+        PUBLIC zclSampleLight_RedSimpleDesc
+        PUBLIC zclSampleLight_SimpleDesc
+        PUBLIC zclSampleLight_Switch1OnOff
+        PUBLIC zclSampleLight_Switch1SimpleDesc
+        PUBLIC zclSampleLight_Switch2OnOff
+        PUBLIC zclSampleLight_Switch2SimpleDesc
+        PUBLIC zclSampleLight_ZCLVersion
+// Y:\05_≤˙∆∑ø™∑¢\Zigbee2MQTTœÓƒø\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\Source\zcl_samplelight_data.c
+//    1 /**************************************************************************************************
+//    2   Filename:       zcl_samplelight_data.c
+//    3   Revised:        $Date: 2014-05-12 13:14:02 -0700 (Mon, 12 May 2014) $
+//    4   Revision:       $Revision: 38502 $
+//    5 
+//    6 
+//    7   Description:    Zigbee Cluster Library - sample device application.
+//    8 
+//    9 
+//   10   Copyright 2006-2014 Texas Instruments Incorporated. All rights reserved.
+//   11 
+//   12   IMPORTANT: Your use of this Software is limited to those specific rights
+//   13   granted under the terms of a software license agreement between the user
+//   14   who downloaded the software, his/her employer (which must be your employer)
+//   15   and Texas Instruments Incorporated (the "License").  You may not use this
+//   16   Software unless you agree to abide by the terms of the License. The License
+//   17   limits your use, and you acknowledge, that the Software may not be modified,
+//   18   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   19   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   20   frequency transceiver, which is integrated into your product.  Other than for
+//   21   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   22   works of, modify, distribute, perform, display or sell this Software and/or
+//   23   its documentation for any purpose.
+//   24 
+//   25   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   26   PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   27   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   28   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   29   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   30   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   31   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   32   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   33   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   34   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   35   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   36 
+//   37   Should you have any questions regarding your right to use this Software,
+//   38   contact Texas Instruments Incorporated at www.TI.com.
+//   39 **************************************************************************************************/
+//   40 
+//   41 /*********************************************************************
+//   42  * INCLUDES
+//   43  */
+//   44 #include "ZComDef.h"
+//   45 #include "OSAL.h"
+//   46 #include "AF.h"
+//   47 #include "ZDConfig.h"
+//   48 
+//   49 #include "zcl.h"
+//   50 #include "zcl_general.h"
+//   51 #include "zcl_ha.h"
+//   52 #include "zcl_ezmode.h"
+//   53 #include "zcl_poll_control.h"
+//   54 #include "zcl_electrical_measurement.h"
+//   55 #include "zcl_diagnostic.h"
+//   56 #include "zcl_meter_identification.h"
+//   57 #include "zcl_appliance_identification.h"
+//   58 #include "zcl_appliance_events_alerts.h"
+//   59 #include "zcl_power_profile.h"
+//   60 #include "zcl_appliance_control.h"
+//   61 #include "zcl_appliance_statistics.h"
+//   62 #include "zcl_hvac.h"
+//   63 
+//   64 #include "zcl_samplelight.h"
+//   65 
+//   66 /*********************************************************************
+//   67  * CONSTANTS
+//   68  */
+//   69 
+//   70 #define SAMPLELIGHT_DEVICE_VERSION     0
+//   71 #define SAMPLELIGHT_FLAGS              0
+//   72 
+//   73 #define SAMPLELIGHT_HWVERSION          1
+//   74 #define SAMPLELIGHT_ZCLVERSION         1
+//   75 
+//   76 /*********************************************************************
+//   77  * TYPEDEFS
+//   78  */
+//   79 
+//   80 /*********************************************************************
+//   81  * MACROS
+//   82  */
+//   83 
+//   84 /*********************************************************************
+//   85  * GLOBAL VARIABLES
+//   86  */
+//   87 
+//   88 // Basic Cluster
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   89 const uint8 zclSampleLight_HWRevision = SAMPLELIGHT_HWVERSION;
+zclSampleLight_HWRevision:
+        DB 1
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   90 const uint8 zclSampleLight_ZCLVersion = SAMPLELIGHT_ZCLVERSION;
+zclSampleLight_ZCLVersion:
+        DB 1
+//   91 
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   92 const uint8 zclSampleLight_ManufacturerName[] = { 10, 'E','m','b','o','a','r','d','.','C','o' };
+zclSampleLight_ManufacturerName:
+        DB 10
+        DB 69
+        DB 109
+        DB 98
+        DB 111
+        DB 97
+        DB 114
+        DB 100
+        DB 46
+        DB 67
+        DB 111
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   93 const uint8 zclSampleLight_ModelId[] = { 11, 'E','m','-','S','e','n','s','o','r','-','A' };
+zclSampleLight_ModelId:
+        DB 11
+        DB 69
+        DB 109
+        DB 45
+        DB 83
+        DB 101
+        DB 110
+        DB 115
+        DB 111
+        DB 114
+        DB 45
+        DB 65
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   94 const uint8 zclSampleLight_DateCode[] = { 8, '2','0','2','5','0','7','1','1' };
+zclSampleLight_DateCode:
+        DB 8
+        DB 50
+        DB 48
+        DB 50
+        DB 53
+        DB 48
+        DB 55
+        DB 49
+        DB 49
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   95 const uint8 zclSampleLight_PowerSource = POWER_SOURCE_MAINS_1_PHASE;
+zclSampleLight_PowerSource:
+        DB 1
+//   96 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   97 uint8 zclSampleLight_LocationDescription[17] = { 16, ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+zclSampleLight_LocationDescription:
+        DATA8
+        DS 17
+        REQUIRE `?<Initializer for zclSampleLight_LocationDescr`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   98 uint8 zclSampleLight_PhysicalEnvironment = 0;
+zclSampleLight_PhysicalEnvironment:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   99 uint8 zclSampleLight_DeviceEnable = DEVICE_ENABLED;
+zclSampleLight_DeviceEnable:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for zclSampleLight_DeviceEnable>`
+        REQUIRE __INIT_XDATA_I
+//  100 
+//  101 // Identify Cluster
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA16
+//  102 uint16 zclSampleLight_IdentifyTime = 0;
+zclSampleLight_IdentifyTime:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+//  103 #ifdef ZCL_EZMODE
+//  104 uint8  zclSampleLight_IdentifyCommissionState;
+//  105 #endif
+//  106 
+//  107 // On/Off Cluster
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  108 uint8  zclSampleLight_OnOff = LIGHT_OFF;
+zclSampleLight_OnOff:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  109 uint8  zclSampleLight_RedOnOff = LIGHT_OFF;
+zclSampleLight_RedOnOff:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  110 uint8  zclSampleLight_Switch1OnOff = LIGHT_OFF;  // P1_2ÂºÄÂÖ≥Áä∂ÊÄÅ
+zclSampleLight_Switch1OnOff:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  111 uint8  zclSampleLight_Switch2OnOff = LIGHT_OFF;  // P1_3ÂºÄÂÖ≥Áä∂ÊÄÅ
+zclSampleLight_Switch2OnOff:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  112 
+//  113 // Level Control Cluster
+//  114 #ifdef ZCL_LEVEL_CTRL
+//  115 uint8  zclSampleLight_LevelCurrentLevel = ATTR_LEVEL_MIN_LEVEL;
+//  116 uint16 zclSampleLight_LevelRemainingTime;
+//  117 uint16 zclSampleLight_LevelOnOffTransitionTime = 20;
+//  118 uint8  zclSampleLight_LevelOnLevel = ATTR_LEVEL_MID_LEVEL;
+//  119 uint16 zclSampleLight_LevelOnTransitionTime = 20;
+//  120 uint16 zclSampleLight_LevelOffTransitionTime = 20;
+//  121 uint8  zclSampleLight_LevelDefaultMoveRate = 0;   // as fast as possible
+//  122 #endif
+//  123 
+//  124 #if ZCL_DISCOVER
+//  125 CONST zclCommandRec_t zclSampleLight_Cmds[] =
+//  126 {
+//  127   {
+//  128     ZCL_CLUSTER_ID_GEN_BASIC,
+//  129     COMMAND_BASIC_RESET_FACT_DEFAULT,
+//  130     CMD_DIR_SERVER_RECEIVED
+//  131   },
+//  132   {
+//  133     ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  134     COMMAND_OFF,
+//  135     CMD_DIR_SERVER_RECEIVED
+//  136   },
+//  137   {
+//  138     ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  139     COMMAND_ON,
+//  140     CMD_DIR_SERVER_RECEIVED
+//  141   },
+//  142   {
+//  143     ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  144     COMMAND_TOGGLE,
+//  145     CMD_DIR_SERVER_RECEIVED
+//  146   },
+//  147 #ifdef ZCL_LEVEL_CONTROL
+//  148   ,{
+//  149     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  150     COMMAND_LEVEL_MOVE_TO_LEVEL,
+//  151     CMD_DIR_SERVER_RECEIVED
+//  152   },
+//  153   {
+//  154     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  155     COMMAND_LEVEL_MOVE,
+//  156     CMD_DIR_SERVER_RECEIVED
+//  157   },
+//  158   {
+//  159     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  160     COMMAND_LEVEL_STEP,
+//  161     CMD_DIR_SERVER_RECEIVED
+//  162   },
+//  163   {
+//  164     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  165     COMMAND_LEVEL_STOP,
+//  166     CMD_DIR_SERVER_RECEIVED
+//  167   },
+//  168   {
+//  169     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  170     COMMAND_LEVEL_MOVE_TO_LEVEL_WITH_ON_OFF,
+//  171     CMD_DIR_SERVER_RECEIVED
+//  172   },
+//  173   {
+//  174     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  175     COMMAND_LEVEL_MOVE_WITH_ON_OFF,
+//  176     CMD_DIR_SERVER_RECEIVED
+//  177   },
+//  178   {
+//  179     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  180     COMMAND_LEVEL_STEP_WITH_ON_OFF,
+//  181     CMD_DIR_SERVER_RECEIVED
+//  182   },
+//  183   {
+//  184     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  185     COMMAND_LEVEL_STOP_WITH_ON_OFF,
+//  186     CMD_DIR_SERVER_RECEIVED
+//  187   }
+//  188 #endif // ZCL_LEVEL_CONTROL
+//  189 };
+//  190 
+//  191 CONST uint8 zclCmdsArraySize = ( sizeof(zclSampleLight_Cmds) / sizeof(zclSampleLight_Cmds[0]) );
+//  192 #endif // ZCL_DISCOVER
+//  193 
+//  194 /*********************************************************************
+//  195  * ATTRIBUTE DEFINITIONS - Uses REAL cluster IDs
+//  196  */
+
+        RSEG CODE_C:CODE:REORDER:NOROOT(0)
+        DATA8
+//  197 CONST zclAttrRec_t zclSampleLight_Attrs[] =
+zclSampleLight_Attrs:
+        DATA16
+        DW 0
+        DW 3
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW zclSampleLight_HWRevision
+        DW 0
+        DW 0
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW zclSampleLight_ZCLVersion
+        DW 0
+        DW 4
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW zclSampleLight_ManufacturerName
+        DW 0
+        DW 5
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW zclSampleLight_ModelId
+        DW 0
+        DW 6
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW zclSampleLight_DateCode
+        DW 0
+        DW 7
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW zclSampleLight_PowerSource
+        DW 0
+        DW 16
+        DATA8
+        DB 66
+        DB 3
+        DATA16
+        DW zclSampleLight_LocationDescription
+        DW 0
+        DW 17
+        DATA8
+        DB 32
+        DB 3
+        DATA16
+        DW zclSampleLight_PhysicalEnvironment
+        DW 0
+        DW 18
+        DATA8
+        DB 16
+        DB 3
+        DATA16
+        DW zclSampleLight_DeviceEnable
+        DW 3
+        DW 0
+        DATA8
+        DB 33
+        DB 3
+        DATA16
+        DW zclSampleLight_IdentifyTime
+        DW 6
+        DW 0
+        DATA8
+        DB 16
+        DB 1
+        DATA16
+        DW zclSampleLight_OnOff
+        DW 6
+        DW 0
+        DATA8
+        DB 16
+        DB 1
+        DATA16
+        DW zclSampleLight_RedOnOff
+        DW 6
+        DW 0
+        DATA8
+        DB 16
+        DB 1
+        DATA16
+        DW zclSampleLight_Switch1OnOff
+        DW 6
+        DW 0
+        DATA8
+        DB 16
+        DB 1
+        DATA16
+        DW zclSampleLight_Switch2OnOff
+        DW 2821
+        DW 0
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 1
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 256
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 257
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 258
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 259
+        DATA8
+        DB 35
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 260
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 261
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 262
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 263
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 264
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 265
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 266
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 267
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 268
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 269
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 270
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 271
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 272
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 273
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 274
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 275
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 276
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 277
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 278
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 279
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 280
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 281
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 282
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 283
+        DATA8
+        DB 33
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 284
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW 0H
+        DW 2821
+        DW 285
+        DATA8
+        DB 40
+        DB 1
+        DATA16
+        DW 0H
+//  198 {
+//  199   // *** General Basic Cluster Attributes ***
+//  200   {
+//  201     ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+//  202     {  // Attribute record
+//  203       ATTRID_BASIC_HW_VERSION,            // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  204       ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+//  205       ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+//  206       (void *)&zclSampleLight_HWRevision  // Pointer to attribute variable
+//  207     }
+//  208   },
+//  209   {
+//  210     ZCL_CLUSTER_ID_GEN_BASIC,
+//  211     { // Attribute record
+//  212       ATTRID_BASIC_ZCL_VERSION,
+//  213       ZCL_DATATYPE_UINT8,
+//  214       ACCESS_CONTROL_READ,
+//  215       (void *)&zclSampleLight_ZCLVersion
+//  216     }
+//  217   },
+//  218   {
+//  219     ZCL_CLUSTER_ID_GEN_BASIC,
+//  220     { // Attribute record
+//  221       ATTRID_BASIC_MANUFACTURER_NAME,
+//  222       ZCL_DATATYPE_CHAR_STR,
+//  223       ACCESS_CONTROL_READ,
+//  224       (void *)zclSampleLight_ManufacturerName
+//  225     }
+//  226   },
+//  227   {
+//  228     ZCL_CLUSTER_ID_GEN_BASIC,
+//  229     { // Attribute record
+//  230       ATTRID_BASIC_MODEL_ID,
+//  231       ZCL_DATATYPE_CHAR_STR,
+//  232       ACCESS_CONTROL_READ,
+//  233       (void *)zclSampleLight_ModelId
+//  234     }
+//  235   },
+//  236   {
+//  237     ZCL_CLUSTER_ID_GEN_BASIC,
+//  238     { // Attribute record
+//  239       ATTRID_BASIC_DATE_CODE,
+//  240       ZCL_DATATYPE_CHAR_STR,
+//  241       ACCESS_CONTROL_READ,
+//  242       (void *)zclSampleLight_DateCode
+//  243     }
+//  244   },
+//  245   {
+//  246     ZCL_CLUSTER_ID_GEN_BASIC,
+//  247     { // Attribute record
+//  248       ATTRID_BASIC_POWER_SOURCE,
+//  249       ZCL_DATATYPE_UINT8,
+//  250       ACCESS_CONTROL_READ,
+//  251       (void *)&zclSampleLight_PowerSource
+//  252     }
+//  253   },
+//  254   {
+//  255     ZCL_CLUSTER_ID_GEN_BASIC,
+//  256     { // Attribute record
+//  257       ATTRID_BASIC_LOCATION_DESC,
+//  258       ZCL_DATATYPE_CHAR_STR,
+//  259       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  260       (void *)zclSampleLight_LocationDescription
+//  261     }
+//  262   },
+//  263   {
+//  264     ZCL_CLUSTER_ID_GEN_BASIC,
+//  265     { // Attribute record
+//  266       ATTRID_BASIC_PHYSICAL_ENV,
+//  267       ZCL_DATATYPE_UINT8,
+//  268       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  269       (void *)&zclSampleLight_PhysicalEnvironment
+//  270     }
+//  271   },
+//  272   {
+//  273     ZCL_CLUSTER_ID_GEN_BASIC,
+//  274     { // Attribute record
+//  275       ATTRID_BASIC_DEVICE_ENABLED,
+//  276       ZCL_DATATYPE_BOOLEAN,
+//  277       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  278       (void *)&zclSampleLight_DeviceEnable
+//  279     }
+//  280   },
+//  281 
+//  282 #ifdef ZCL_IDENTIFY
+//  283   // *** Identify Cluster Attribute ***
+//  284   {
+//  285     ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  286     { // Attribute record
+//  287       ATTRID_IDENTIFY_TIME,
+//  288       ZCL_DATATYPE_UINT16,
+//  289       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  290       (void *)&zclSampleLight_IdentifyTime
+//  291     }
+//  292   },
+//  293  #ifdef ZCL_EZMODE
+//  294   // *** Identify Cluster Attribute ***
+//  295   {
+//  296     ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  297     { // Attribute record
+//  298       ATTRID_IDENTIFY_COMMISSION_STATE,
+//  299       ZCL_DATATYPE_UINT8,
+//  300       (ACCESS_CONTROL_READ),
+//  301       (void *)&zclSampleLight_IdentifyCommissionState
+//  302     }
+//  303   },
+//  304  #endif // ZCL_EZMODE
+//  305 #endif
+//  306 
+//  307   // *** On/Off Cluster Attributes ***
+//  308   {
+//  309     ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  310     { // Attribute record
+//  311       ATTRID_ON_OFF,
+//  312       ZCL_DATATYPE_BOOLEAN,
+//  313       ACCESS_CONTROL_READ,
+//  314       (void *)&zclSampleLight_OnOff
+//  315     }
+//  316   },
+//  317   {
+//  318     ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  319     { // Attribute record
+//  320       ATTRID_ON_OFF,
+//  321       ZCL_DATATYPE_BOOLEAN,
+//  322       ACCESS_CONTROL_READ,
+//  323       (void *)&zclSampleLight_RedOnOff
+//  324     }
+//  325   },
+//  326   {
+//  327     ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  328     { // Attribute record
+//  329       ATTRID_ON_OFF,
+//  330       ZCL_DATATYPE_BOOLEAN,
+//  331       ACCESS_CONTROL_READ,
+//  332       (void *)&zclSampleLight_Switch1OnOff
+//  333     }
+//  334   },
+//  335   {
+//  336     ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  337     { // Attribute record
+//  338       ATTRID_ON_OFF,
+//  339       ZCL_DATATYPE_BOOLEAN,
+//  340       ACCESS_CONTROL_READ,
+//  341       (void *)&zclSampleLight_Switch2OnOff
+//  342     }
+//  343   }
+//  344 
+//  345 #ifdef ZCL_LEVEL_CTRL
+//  346   , {
+//  347     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  348     { // Attribute record
+//  349       ATTRID_LEVEL_CURRENT_LEVEL,
+//  350       ZCL_DATATYPE_UINT8,
+//  351       ACCESS_CONTROL_READ,
+//  352       (void *)&zclSampleLight_LevelCurrentLevel
+//  353     }
+//  354   },
+//  355   {
+//  356     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  357     { // Attribute record
+//  358       ATTRID_LEVEL_REMAINING_TIME,
+//  359       ZCL_DATATYPE_UINT16,
+//  360       ACCESS_CONTROL_READ,
+//  361       (void *)&zclSampleLight_LevelRemainingTime
+//  362     }
+//  363   },
+//  364   {
+//  365     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  366     { // Attribute record
+//  367       ATTRID_LEVEL_ON_OFF_TRANSITION_TIME,
+//  368       ZCL_DATATYPE_UINT16,
+//  369       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  370       (void *)&zclSampleLight_LevelOnOffTransitionTime
+//  371     }
+//  372   },
+//  373   {
+//  374     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  375     { // Attribute record
+//  376       ATTRID_LEVEL_ON_LEVEL,
+//  377       ZCL_DATATYPE_UINT8,
+//  378       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  379       (void *)&zclSampleLight_LevelOnLevel
+//  380     }
+//  381   },
+//  382   {
+//  383     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  384     { // Attribute record
+//  385       ATTRID_LEVEL_ON_TRANSITION_TIME,
+//  386       ZCL_DATATYPE_UINT16,
+//  387       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  388       (void *)&zclSampleLight_LevelOnTransitionTime
+//  389     }
+//  390   },
+//  391   {
+//  392     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  393     { // Attribute record
+//  394       ATTRID_LEVEL_OFF_TRANSITION_TIME,
+//  395       ZCL_DATATYPE_UINT16,
+//  396       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  397       (void *)&zclSampleLight_LevelOffTransitionTime
+//  398     }
+//  399   },
+//  400   {
+//  401     ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  402     { // Attribute record
+//  403       ATTRID_LEVEL_DEFAULT_MOVE_RATE,
+//  404       ZCL_DATATYPE_UINT8,
+//  405       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  406       (void *)&zclSampleLight_LevelDefaultMoveRate
+//  407     }
+//  408   }
+//  409 #endif
+//  410  #ifdef ZCL_DIAGNOSTIC
+//  411   , {
+//  412     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  413     {  // Attribute record
+//  414       ATTRID_DIAGNOSTIC_NUMBER_OF_RESETS,
+//  415       ZCL_DATATYPE_UINT16,
+//  416       ACCESS_CONTROL_READ,
+//  417       NULL // Use application's callback to Read this attribute
+//  418     }
+//  419   },
+//  420   {
+//  421     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  422     {  // Attribute record
+//  423       ATTRID_DIAGNOSTIC_PERSISTENT_MEMORY_WRITES,
+//  424       ZCL_DATATYPE_UINT16,
+//  425       ACCESS_CONTROL_READ,
+//  426       NULL // Use application's callback to Read this attribute
+//  427     }
+//  428   },
+//  429   {
+//  430     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  431     {  // Attribute record
+//  432       ATTRID_DIAGNOSTIC_MAC_RX_BCAST,
+//  433       ZCL_DATATYPE_UINT32,
+//  434       ACCESS_CONTROL_READ,
+//  435       NULL // Use application's callback to Read this attribute
+//  436     }
+//  437   },
+//  438   {
+//  439     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  440     {  // Attribute record
+//  441       ATTRID_DIAGNOSTIC_MAC_TX_BCAST,
+//  442       ZCL_DATATYPE_UINT32,
+//  443       ACCESS_CONTROL_READ,
+//  444       NULL // Use application's callback to Read this attribute
+//  445     }
+//  446   },
+//  447   {
+//  448     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  449     {  // Attribute record
+//  450       ATTRID_DIAGNOSTIC_MAC_RX_UCAST,
+//  451       ZCL_DATATYPE_UINT32,
+//  452       ACCESS_CONTROL_READ,
+//  453       NULL // Use application's callback to Read this attribute
+//  454     }
+//  455   },
+//  456   {
+//  457     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  458     {  // Attribute record
+//  459       ATTRID_DIAGNOSTIC_MAC_TX_UCAST,
+//  460       ZCL_DATATYPE_UINT32,
+//  461       ACCESS_CONTROL_READ,
+//  462       NULL // Use application's callback to Read this attribute
+//  463     }
+//  464   },
+//  465   {
+//  466     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  467     {  // Attribute record
+//  468       ATTRID_DIAGNOSTIC_MAC_TX_UCAST_RETRY,
+//  469       ZCL_DATATYPE_UINT16,
+//  470       ACCESS_CONTROL_READ,
+//  471       NULL // Use application's callback to Read this attribute
+//  472     }
+//  473   },
+//  474   {
+//  475     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  476     {  // Attribute record
+//  477       ATTRID_DIAGNOSTIC_MAC_TX_UCAST_FAIL,
+//  478       ZCL_DATATYPE_UINT16,
+//  479       ACCESS_CONTROL_READ,
+//  480       NULL // Use application's callback to Read this attribute
+//  481     }
+//  482   },
+//  483   {
+//  484     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  485     {  // Attribute record
+//  486       ATTRID_DIAGNOSTIC_APS_RX_BCAST,
+//  487       ZCL_DATATYPE_UINT16,
+//  488       ACCESS_CONTROL_READ,
+//  489       NULL // Use application's callback to Read this attribute
+//  490     }
+//  491   },
+//  492   {
+//  493     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  494     {  // Attribute record
+//  495       ATTRID_DIAGNOSTIC_APS_TX_BCAST,
+//  496       ZCL_DATATYPE_UINT16,
+//  497       ACCESS_CONTROL_READ,
+//  498       NULL // Use application's callback to Read this attribute
+//  499     }
+//  500   },
+//  501   {
+//  502     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  503     {  // Attribute record
+//  504       ATTRID_DIAGNOSTIC_APS_RX_UCAST,
+//  505       ZCL_DATATYPE_UINT16,
+//  506       ACCESS_CONTROL_READ,
+//  507       NULL // Use application's callback to Read this attribute
+//  508     }
+//  509   },
+//  510   {
+//  511     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  512     {  // Attribute record
+//  513       ATTRID_DIAGNOSTIC_APS_TX_UCAST_SUCCESS,
+//  514       ZCL_DATATYPE_UINT16,
+//  515       ACCESS_CONTROL_READ,
+//  516       NULL // Use application's callback to Read this attribute
+//  517     }
+//  518   },
+//  519   {
+//  520     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  521     {  // Attribute record
+//  522       ATTRID_DIAGNOSTIC_APS_TX_UCAST_RETRY,
+//  523       ZCL_DATATYPE_UINT16,
+//  524       ACCESS_CONTROL_READ,
+//  525       NULL // Use application's callback to Read this attribute
+//  526     }
+//  527   },
+//  528   {
+//  529     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  530     {  // Attribute record
+//  531       ATTRID_DIAGNOSTIC_APS_TX_UCAST_FAIL,
+//  532       ZCL_DATATYPE_UINT16,
+//  533       ACCESS_CONTROL_READ,
+//  534       NULL // Use application's callback to Read this attribute
+//  535     }
+//  536   },
+//  537   {
+//  538     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  539     {  // Attribute record
+//  540       ATTRID_DIAGNOSTIC_ROUTE_DISC_INITIATED,
+//  541       ZCL_DATATYPE_UINT16,
+//  542       ACCESS_CONTROL_READ,
+//  543       NULL // Use application's callback to Read this attribute
+//  544     }
+//  545   },
+//  546   {
+//  547     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  548     {  // Attribute record
+//  549       ATTRID_DIAGNOSTIC_NEIGHBOR_ADDED,
+//  550       ZCL_DATATYPE_UINT16,
+//  551       ACCESS_CONTROL_READ,
+//  552       NULL // Use application's callback to Read this attribute
+//  553     }
+//  554   },
+//  555   {
+//  556     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  557     {  // Attribute record
+//  558       ATTRID_DIAGNOSTIC_NEIGHBOR_REMOVED,
+//  559       ZCL_DATATYPE_UINT16,
+//  560       ACCESS_CONTROL_READ,
+//  561       NULL // Use application's callback to Read this attribute
+//  562     }
+//  563   },
+//  564   {
+//  565     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  566     {  // Attribute record
+//  567       ATTRID_DIAGNOSTIC_NEIGHBOR_STALE,
+//  568       ZCL_DATATYPE_UINT16,
+//  569       ACCESS_CONTROL_READ,
+//  570       NULL // Use application's callback to Read this attribute
+//  571     }
+//  572   },
+//  573   {
+//  574     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  575     {  // Attribute record
+//  576       ATTRID_DIAGNOSTIC_JOIN_INDICATION,
+//  577       ZCL_DATATYPE_UINT16,
+//  578       ACCESS_CONTROL_READ,
+//  579       NULL // Use application's callback to Read this attribute
+//  580     }
+//  581   },
+//  582   {
+//  583     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  584     {  // Attribute record
+//  585       ATTRID_DIAGNOSTIC_CHILD_MOVED,
+//  586       ZCL_DATATYPE_UINT16,
+//  587       ACCESS_CONTROL_READ,
+//  588       NULL // Use application's callback to Read this attribute
+//  589     }
+//  590   },
+//  591   {
+//  592     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  593     {  // Attribute record
+//  594       ATTRID_DIAGNOSTIC_NWK_FC_FAILURE,
+//  595       ZCL_DATATYPE_UINT16,
+//  596       ACCESS_CONTROL_READ,
+//  597       NULL // Use application's callback to Read this attribute
+//  598     }
+//  599   },
+//  600   {
+//  601     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  602     {  // Attribute record
+//  603       ATTRID_DIAGNOSTIC_APS_FC_FAILURE,
+//  604       ZCL_DATATYPE_UINT16,
+//  605       ACCESS_CONTROL_READ,
+//  606       NULL // Use application's callback to Read this attribute
+//  607     }
+//  608   },
+//  609   {
+//  610     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  611     {  // Attribute record
+//  612       ATTRID_DIAGNOSTIC_APS_UNAUTHORIZED_KEY,
+//  613       ZCL_DATATYPE_UINT16,
+//  614       ACCESS_CONTROL_READ,
+//  615       NULL // Use application's callback to Read this attribute
+//  616     }
+//  617   },
+//  618   {
+//  619     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  620     {  // Attribute record
+//  621       ATTRID_DIAGNOSTIC_NWK_DECRYPT_FAILURES,
+//  622       ZCL_DATATYPE_UINT16,
+//  623       ACCESS_CONTROL_READ,
+//  624       NULL // Use application's callback to Read this attribute
+//  625     }
+//  626   },
+//  627   {
+//  628     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  629     {  // Attribute record
+//  630       ATTRID_DIAGNOSTIC_APS_DECRYPT_FAILURES,
+//  631       ZCL_DATATYPE_UINT16,
+//  632       ACCESS_CONTROL_READ,
+//  633       NULL // Use application's callback to Read this attribute
+//  634     }
+//  635   },
+//  636   {
+//  637     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  638     {  // Attribute record
+//  639       ATTRID_DIAGNOSTIC_PACKET_BUFFER_ALLOCATE_FAILURES,
+//  640       ZCL_DATATYPE_UINT16,
+//  641       ACCESS_CONTROL_READ,
+//  642       NULL // Use application's callback to Read this attribute
+//  643     }
+//  644   },
+//  645   {
+//  646     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  647     {  // Attribute record
+//  648       ATTRID_DIAGNOSTIC_RELAYED_UCAST,
+//  649       ZCL_DATATYPE_UINT16,
+//  650       ACCESS_CONTROL_READ,
+//  651       NULL // Use application's callback to Read this attribute
+//  652     }
+//  653   },
+//  654   {
+//  655     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  656     {  // Attribute record
+//  657       ATTRID_DIAGNOSTIC_PHY_TO_MAC_QUEUE_LIMIT_REACHED,
+//  658       ZCL_DATATYPE_UINT16,
+//  659       ACCESS_CONTROL_READ,
+//  660       NULL // Use application's callback to Read this attribute
+//  661     }
+//  662   },
+//  663   {
+//  664     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  665     {  // Attribute record
+//  666       ATTRID_DIAGNOSTIC_PACKET_VALIDATE_DROP_COUNT,
+//  667       ZCL_DATATYPE_UINT16,
+//  668       ACCESS_CONTROL_READ,
+//  669       NULL // Use application's callback to Read this attribute
+//  670     }
+//  671   },
+//  672   {
+//  673     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  674     {  // Attribute record
+//  675       ATTRID_DIAGNOSTIC_AVERAGE_MAC_RETRY_PER_APS_MESSAGE_SENT,
+//  676       ZCL_DATATYPE_UINT16,
+//  677       ACCESS_CONTROL_READ,
+//  678       NULL // Use application's callback to Read this attribute
+//  679     }
+//  680   },
+//  681   {
+//  682     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  683     {  // Attribute record
+//  684       ATTRID_DIAGNOSTIC_LAST_MESSAGE_LQI,
+//  685       ZCL_DATATYPE_UINT8,
+//  686       ACCESS_CONTROL_READ,
+//  687       NULL // Use application's callback to Read this attribute
+//  688     }
+//  689   },
+//  690   {
+//  691     ZCL_CLUSTER_ID_HA_DIAGNOSTIC,
+//  692     {  // Attribute record
+//  693       ATTRID_DIAGNOSTIC_LAST_MESSAGE_RSSI,
+//  694       ZCL_DATATYPE_INT8,
+//  695       ACCESS_CONTROL_READ,
+//  696       NULL // Use application's callback to Read this attribute
+//  697     }
+//  698   },
+//  699 #endif // ZCL_DIAGNOSTIC
+//  700 };
+//  701 
+
+        RSEG CODE_C:CODE:REORDER:NOROOT(0)
+        DATA8
+//  702 uint8 CONST zclSampleLight_NumAttributes = ( sizeof(zclSampleLight_Attrs) / sizeof(zclSampleLight_Attrs[0]) );
+zclSampleLight_NumAttributes:
+        DB 46
+//  703 
+//  704 /*********************************************************************
+//  705  * SIMPLE DESCRIPTOR
+//  706  */
+//  707 // This is the Cluster ID List and should be filled with Application
+//  708 // specific cluster IDs.
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//  709 const cId_t zclSampleLight_InClusterList[] =
+zclSampleLight_InClusterList:
+        DATA16
+        DW 0
+        DW 3
+        DW 4
+        DW 5
+        DW 6
+//  710 {
+//  711   ZCL_CLUSTER_ID_GEN_BASIC,
+//  712   ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  713   ZCL_CLUSTER_ID_GEN_GROUPS,
+//  714   ZCL_CLUSTER_ID_GEN_SCENES,
+//  715   ZCL_CLUSTER_ID_GEN_ON_OFF
+//  716 #ifdef ZCL_LEVEL_CTRL
+//  717   , ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL
+//  718 #endif
+//  719 };
+//  720 // work-around for compiler bug... IAR can't calculate size of array with #if options.
+//  721 #ifdef ZCL_LEVEL_CTRL
+//  722  #define ZCLSAMPLELIGHT_MAX_INCLUSTERS   6
+//  723 #else
+//  724  #define ZCLSAMPLELIGHT_MAX_INCLUSTERS   5
+//  725 #endif
+//  726 
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA16
+//  727 const cId_t zclSampleLight_OutClusterList[] =
+zclSampleLight_OutClusterList:
+        DW 0
+//  728 {
+//  729   ZCL_CLUSTER_ID_GEN_BASIC
+//  730 };
+//  731 #define ZCLSAMPLELIGHT_MAX_OUTCLUSTERS  (sizeof(zclSampleLight_OutClusterList) / sizeof(zclSampleLight_OutClusterList[0]))
+//  732 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  733 SimpleDescriptionFormat_t zclSampleLight_SimpleDesc =
+zclSampleLight_SimpleDesc:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSampleLight_SimpleDesc>`
+        REQUIRE __INIT_XDATA_I
+//  734 {
+//  735   SAMPLELIGHT_ENDPOINT,                  //  int Endpoint;
+//  736   ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
+//  737 #ifdef ZCL_LEVEL_CTRL
+//  738   ZCL_HA_DEVICEID_DIMMABLE_LIGHT,        //  uint16 AppDeviceId;
+//  739 #else
+//  740   ZCL_HA_DEVICEID_ON_OFF_LIGHT,          //  uint16 AppDeviceId;
+//  741 #endif
+//  742   SAMPLELIGHT_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  743   SAMPLELIGHT_FLAGS,                     //  int   AppFlags:4;
+//  744   ZCLSAMPLELIGHT_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  745   (cId_t *)zclSampleLight_InClusterList, //  byte *pAppInClusterList;
+//  746   ZCLSAMPLELIGHT_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+//  747   (cId_t *)zclSampleLight_OutClusterList //  byte *pAppInClusterList;
+//  748 };
+//  749 
+//  750 // Red LED Simple Descriptor
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  751 SimpleDescriptionFormat_t zclSampleLight_RedSimpleDesc =
+zclSampleLight_RedSimpleDesc:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSampleLight_RedSimpleDesc`
+        REQUIRE __INIT_XDATA_I
+//  752 {
+//  753   SAMPLELIGHT_RED_ENDPOINT,              //  int Endpoint;
+//  754   ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
+//  755   ZCL_HA_DEVICEID_ON_OFF_LIGHT,          //  uint16 AppDeviceId;
+//  756   SAMPLELIGHT_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  757   SAMPLELIGHT_FLAGS,                     //  int   AppFlags:4;
+//  758   ZCLSAMPLELIGHT_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  759   (cId_t *)zclSampleLight_InClusterList, //  byte *pAppInClusterList;
+//  760   ZCLSAMPLELIGHT_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+//  761   (cId_t *)zclSampleLight_OutClusterList //  byte *pAppInClusterList;
+//  762 };
+//  763 
+//  764 /*********************************************************************
+//  765  * GLOBAL FUNCTIONS
+//  766  */
+//  767 
+//  768 /*********************************************************************
+//  769  * LOCAL FUNCTIONS
+//  770  */
+//  771 
+//  772 /****************************************************************************
+//  773 ****************************************************************************/
+//  774 
+//  775 // Red LED Simple Descriptor declaration
+//  776 extern SimpleDescriptionFormat_t zclSampleLight_RedSimpleDesc;
+//  777 
+//  778 // Switch1 Simple Descriptor (P1_2)
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  779 SimpleDescriptionFormat_t zclSampleLight_Switch1SimpleDesc =
+zclSampleLight_Switch1SimpleDesc:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSampleLight_Switch1Simple`
+        REQUIRE __INIT_XDATA_I
+//  780 {
+//  781   SAMPLELIGHT_SWITCH1_ENDPOINT,         //  int Endpoint;
+//  782   ZCL_HA_PROFILE_ID,                    //  uint16 AppProfId;
+//  783   ZCL_HA_DEVICEID_ON_OFF_OUTPUT,        //  uint16 AppDeviceId; - ‰ΩøÁî®ËæìÂá∫ËÆæÂ§áÁ±ªÂûã
+//  784   SAMPLELIGHT_DEVICE_VERSION,           //  int   AppDevVer:4;
+//  785   SAMPLELIGHT_FLAGS,                    //  int   AppFlags:4;
+//  786   ZCLSAMPLELIGHT_MAX_INCLUSTERS,        //  byte  AppNumInClusters;
+//  787   (cId_t *)zclSampleLight_InClusterList, //  byte *pAppInClusterList;
+//  788   ZCLSAMPLELIGHT_MAX_OUTCLUSTERS,       //  byte  AppNumInClusters;
+//  789   (cId_t *)zclSampleLight_OutClusterList //  byte *pAppInClusterList;
+//  790 };
+//  791 
+//  792 // Switch2 Simple Descriptor (P1_3)
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  793 SimpleDescriptionFormat_t zclSampleLight_Switch2SimpleDesc =
+zclSampleLight_Switch2SimpleDesc:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSampleLight_Switch2Simple`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSampleLight_LocationDescr`:
+        DATA8
+        DB 16
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSampleLight_DeviceEnable>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSampleLight_SimpleDesc>`:
+        DATA8
+        DB 8
+        DATA16
+        DW 260
+        DW 256
+        DATA8
+        DB 0
+        DB 5
+        DATA16
+        DW zclSampleLight_InClusterList
+        DATA8
+        DB 1
+        DATA16
+        DW zclSampleLight_OutClusterList
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSampleLight_RedSimpleDesc`:
+        DATA8
+        DB 9
+        DATA16
+        DW 260
+        DW 256
+        DATA8
+        DB 0
+        DB 5
+        DATA16
+        DW zclSampleLight_InClusterList
+        DATA8
+        DB 1
+        DATA16
+        DW zclSampleLight_OutClusterList
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSampleLight_Switch1Simple`:
+        DATA8
+        DB 10
+        DATA16
+        DW 260
+        DW 2
+        DATA8
+        DB 0
+        DB 5
+        DATA16
+        DW zclSampleLight_InClusterList
+        DATA8
+        DB 1
+        DATA16
+        DW zclSampleLight_OutClusterList
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSampleLight_Switch2Simple`:
+        DATA8
+        DB 11
+        DATA16
+        DW 260
+        DW 2
+        DATA8
+        DB 0
+        DB 5
+        DATA16
+        DW zclSampleLight_InClusterList
+        DATA8
+        DB 1
+        DATA16
+        DW zclSampleLight_OutClusterList
+
+        END
+//  794 {
+//  795   SAMPLELIGHT_SWITCH2_ENDPOINT,         //  int Endpoint;
+//  796   ZCL_HA_PROFILE_ID,                    //  uint16 AppProfId;
+//  797   ZCL_HA_DEVICEID_ON_OFF_OUTPUT,        //  uint16 AppDeviceId; - ‰ΩøÁî®ËæìÂá∫ËÆæÂ§áÁ±ªÂûã
+//  798   SAMPLELIGHT_DEVICE_VERSION,           //  int   AppDevVer:4;
+//  799   SAMPLELIGHT_FLAGS,                    //  int   AppFlags:4;
+//  800   ZCLSAMPLELIGHT_MAX_INCLUSTERS,        //  byte  AppNumInClusters;
+//  801   (cId_t *)zclSampleLight_InClusterList, //  byte *pAppInClusterList;
+//  802   ZCLSAMPLELIGHT_MAX_OUTCLUSTERS,       //  byte  AppNumInClusters;
+//  803   (cId_t *)zclSampleLight_OutClusterList //  byte *pAppInClusterList;
+//  804 };
+//  805 
+//  806 
+// 
+// 369 bytes in segment CODE_C
+//  66 bytes in segment XDATA_I
+//  66 bytes in segment XDATA_ID
+//  47 bytes in segment XDATA_ROM_C
+//   7 bytes in segment XDATA_Z
+// 
+// 435 bytes of CODE  memory
+//  47 bytes of CONST memory
+//  73 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none

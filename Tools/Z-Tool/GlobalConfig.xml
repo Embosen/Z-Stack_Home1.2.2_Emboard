@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<GlobalConfigurations>
+  <Channel>0</Channel>
+  <Timeout>10</Timeout>
+  <DeviceList>
+    <Device>
+      <ID>COM1</ID>
+      <Connection>COM1</Connection>
+      <DeviceType>NONE</DeviceType>
+    </Device>
+    <Device>
+      <ID>COM5</ID>
+      <Connection>COM5</Connection>
+      <DeviceType>NONE</DeviceType>
+    </Device>
+  </DeviceList>
+</GlobalConfigurations>

@@ -1,0 +1,55 @@
+# Build outputs
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.hex
+*.bin
+*.elf
+*.map
+*.lst
+
+# IDE files
+*.ewd
+*.ewp
+*.eww
+*.icf
+*.xcl
+*.cfg
+*.dep
+*.log
+
+# Debug and Release folders
+Debug/
+Release/
+DebugLog/
+ReleaseLog/
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# Version control
+*.orig
+*.rej
+
+# Binary files
+*.bin
+*.hex
+*.a
+*.lib
+
+# Log files
+*.log
+BuildLog.log
+
+# Backup files
+*.bak
+*.backup 
