@@ -1,61 +1,120 @@
 # Z-Stack Home 1.2.2 Emboard
 
-This repository contains the Z-Stack Home 1.2.2 Emboard project, which is a ZigBee development framework for Texas Instruments CC2530 and CC2538 microcontrollers.
+## 项目简介
 
-## Project Structure
+Z-Stack Home 1.2.2 Emboard 是一个基于德州仪器（Texas Instruments）CC2530和CC2538微控制器的ZigBee开发框架。该项目提供了完整的ZigBee协议栈实现，支持智能家居、物联网设备开发。
 
-- **Components/**: Contains all the Z-Stack components including:
-  - **bsp/**: Board Support Package
-  - **driverlib/**: Hardware driver libraries
-  - **hal/**: Hardware Abstraction Layer
-  - **mac/**: MAC layer implementation
-  - **mt/**: Monitor Test interface
-  - **osal/**: Operating System Abstraction Layer
-  - **services/**: Additional services (ECC, SADDR, SDATA)
-  - **stack/**: Z-Stack core components (AF, NWK, SAPI, SEC, SYS, ZCL, ZDO)
-  - **usblib/**: USB library for CC2538
-  - **zmac/**: ZMAC implementation
+## 核心功能
 
-- **Projects/**: Contains sample applications and tools:
-  - **zstack/HomeAutomation/**: Home automation sample applications
-  - **Libraries/**: Pre-compiled libraries for different platforms
-  - **OTA/**: Over-The-Air update components
-  - **Tools/**: Development tools and utilities
-  - **ZAP/**: Z-Stack Application Profile samples
-  - **ZMain/**: Main application entry points
-  - **ZNP/**: ZigBee Network Processor implementations
+### 🏠 智能家居支持
+- **Home Automation Profile**: 完整的ZigBee HA 1.2协议实现
+- **设备类型支持**: 开关、调光器、传感器、温控器等
+- **场景控制**: 支持设备组合和自动化场景
+- **远程控制**: 通过网关实现远程设备管理
 
-- **Tools/**: Additional development tools including Z-Tool
+### 📡 网络功能
+- **Mesh网络**: 支持自组织网状网络拓扑
+- **路由功能**: 自动路由发现和数据转发
+- **网络管理**: 设备加入、离开、网络重建
+- **安全机制**: AES-128加密，支持密钥管理
 
-## Supported Platforms
+### 🔧 开发工具
+- **Monitor Test**: 网络监控和调试工具
+- **Z-Tool**: 图形化配置和测试工具
+- **OTA升级**: 支持无线固件更新
+- **调试接口**: 丰富的日志和诊断功能
 
-- CC2530
-- CC2531
-- CC2538
-- MSP5438
+### 💾 存储管理
+- **NV存储**: 非易失性数据存储
+- **配置管理**: 设备参数持久化
+- **绑定表**: 设备间关联关系管理
+- **地址管理**: 短地址和长地址分配
 
-## Getting Started
+## 技术特性
 
-1. Install IAR Embedded Workbench for 8051 (for CC2530/CC2531) or ARM (for CC2538)
-2. Open the appropriate project file (.eww) in the Projects directory
-3. Configure your target platform and build settings
-4. Build and flash the application
+### 硬件支持
+- **CC2530**: 8051内核，2.4GHz RF收发器
+- **CC2531**: 集成USB接口的CC2530
+- **CC2538**: ARM Cortex-M3内核，增强性能
+- **MSP5438**: 低功耗MSP430系列
 
-## Sample Applications
+### 协议栈
+- **PHY层**: IEEE 802.15.4物理层
+- **MAC层**: IEEE 802.15.4 MAC层
+- **NWK层**: ZigBee网络层
+- **APS层**: 应用支持子层
+- **ZCL层**: ZigBee集群库
 
-- **Em_Sensor_A**: Energy measurement sensor application
-- **HA-SampleLight**: Home automation light control sample
-- **HA-SampleSwitch**: Home automation switch sample
-- **OTA_Dongle**: Over-the-air update dongle application
+### 应用框架
+- **ZDO**: ZigBee设备对象
+- **ZCL**: ZigBee集群库
+- **AF**: 应用框架
+- **OSAL**: 操作系统抽象层
 
-## Documentation
+## 应用场景
 
-For detailed documentation, refer to the Texas Instruments Z-Stack documentation and the TI-RTOS documentation.
+### 智能照明
+- LED调光控制
+- 色温调节
+- 定时开关
+- 场景模式
 
-## License
+### 环境监测
+- 温湿度传感器
+- 空气质量监测
+- 光照强度检测
+- 运动检测
 
-This project is based on Texas Instruments Z-Stack Home 1.2.2. Please refer to the original TI license terms.
+### 安全监控
+- 门窗传感器
+- 烟雾报警器
+- 入侵检测
+- 视频监控
 
-## Contributing
+### 能源管理
+- 智能电表
+- 负载控制
+- 能耗监测
+- 需求响应
 
-This is a reference implementation. For modifications, please ensure compatibility with the Z-Stack framework and test thoroughly on your target hardware. 
+## 开发优势
+
+### 快速开发
+- 完整的协议栈实现
+- 丰富的示例代码
+- 标准化的API接口
+- 详细的开发文档
+
+### 稳定可靠
+- 经过验证的TI官方实现
+- 完善的错误处理机制
+- 丰富的调试工具
+- 长期技术支持
+
+### 成本优化
+- 低功耗设计
+- 硬件成本可控
+- 开发周期短
+- 维护成本低
+
+## 系统要求
+
+### 开发环境
+- IAR Embedded Workbench for 8051 (CC2530/CC2531)
+- IAR Embedded Workbench for ARM (CC2538)
+- Code Composer Studio (可选)
+
+### 硬件要求
+- CC2530/CC2531/CC2538开发板
+- USB调试器
+- 2.4GHz天线
+
+## 许可证
+
+本项目基于德州仪器Z-Stack Home 1.2.2，请遵循原始TI许可条款。
+
+## 技术支持
+
+- 官方文档: Texas Instruments Z-Stack文档
+- 社区支持: ZigBee联盟技术论坛
+- 开发工具: TI Resource Explorer 
