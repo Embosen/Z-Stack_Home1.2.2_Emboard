@@ -39,7 +39,7 @@
 #include "zcl_ezmode.h"
 #include "zcl_diagnostic.h"
 
-#include "zcl_EmSensorA.h"
+#include "zcl_EmSensorB.h"
 
 #include "onboard.h"
 
@@ -301,7 +301,7 @@ static zclGeneral_AppCallbacks_t zclSampleLight_CmdCallbacks =
 void zclSampleLight_Init( byte task_id )
 {
   // 调试信息：初始化开始
-  debug_str("Em_Sensor_A Init Start");
+  debug_str("Em_Sensor_B_Init Start");
   
   zclSampleLight_TaskID = task_id;
 
@@ -402,7 +402,7 @@ void zclSampleLight_Init( byte task_id )
 #endif
 
   // 调试信息：初始化完成
-  debug_str("Em_Sensor_A Init Done");
+  debug_str("Em_Sensor_B Init Done");
   
   // 启动S1按键状态检测定时器 - 已注释，保留代码方便调试
   // osal_start_timerEx( zclSampleLight_TaskID, SAMPLELIGHT_S1_CHECK_EVT, 1000 );

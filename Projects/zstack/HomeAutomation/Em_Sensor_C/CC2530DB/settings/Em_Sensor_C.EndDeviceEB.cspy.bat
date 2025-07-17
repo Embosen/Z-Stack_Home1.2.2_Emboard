@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\settings\Em_Sensor_A.EndDeviceEB.general.xcl" --backend -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\settings\Em_Sensor_A.EndDeviceEB.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_C\CC2530DB\settings\Em_Sensor_C.EndDeviceEB.general.xcl" --backend -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_C\CC2530DB\settings\Em_Sensor_C.EndDeviceEB.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\settings\Em_Sensor_A.EndDeviceEB.general.xcl" "--debug_file=%~1" --backend -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\settings\Em_Sensor_A.EndDeviceEB.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_C\CC2530DB\settings\Em_Sensor_C.EndDeviceEB.general.xcl" "--debug_file=%~1" --backend -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_C\CC2530DB\settings\Em_Sensor_C.EndDeviceEB.driver.xcl" 
 
 @echo off 
 :end

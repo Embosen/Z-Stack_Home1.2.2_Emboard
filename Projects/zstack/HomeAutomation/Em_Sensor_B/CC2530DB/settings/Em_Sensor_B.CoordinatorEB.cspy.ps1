@@ -23,9 +23,9 @@ param([String]$debugfile = "");
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\settings\Em_Sensor_A.EndDeviceEB.general.xcl" --backend -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\settings\Em_Sensor_A.EndDeviceEB.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_B\CC2530DB\settings\Em_Sensor_B.CoordinatorEB.general.xcl" --backend -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_B\CC2530DB\settings\Em_Sensor_B.CoordinatorEB.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\settings\Em_Sensor_A.EndDeviceEB.general.xcl" --debug_file=$debugfile --backend -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_A\CC2530DB\settings\Em_Sensor_A.EndDeviceEB.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_B\CC2530DB\settings\Em_Sensor_B.CoordinatorEB.general.xcl" --debug_file=$debugfile --backend -f "Y:\05_产品开发\01_产品研发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\HomeAutomation\Em_Sensor_B\CC2530DB\settings\Em_Sensor_B.CoordinatorEB.driver.xcl" 
 }

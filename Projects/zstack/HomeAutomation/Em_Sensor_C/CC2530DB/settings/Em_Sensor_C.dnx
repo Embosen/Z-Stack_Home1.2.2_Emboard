@@ -12,14 +12,8 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <DebugChecksum>
-        <Checksum>702634174</Checksum>
+        <Checksum>2037352914</Checksum>
     </DebugChecksum>
-    <CallStack>
-        <ShowArgs>0</ShowArgs>
-    </CallStack>
-    <Disassembly>
-        <MixedMode>1</MixedMode>
-    </Disassembly>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -29,6 +23,9 @@
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
+    <CallStack>
+        <ShowArgs>0</ShowArgs>
+    </CallStack>
     <Breakpoints>
         <Count>0</Count>
     </Breakpoints>
@@ -37,10 +34,7 @@
         <LeaveTargetRunning>1</LeaveTargetRunning>
     </ChipconEmu>
     <Aliases>
-        <A0>_ "Y:\05_产品开发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Components\mac\low_level\srf04\single_chip\mac_csp_tx.c" ""</A0>
-        <A1>_ "Y:\05_产品开发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Components\osal\mcu\cc2530\OSAL_Math.s51" ""</A1>
-        <A2>_ "Y:\05_产品开发\Zigbee2MQTT项目\Z-Stack_Home1.2.2_Emboard\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""</A2>
-        <Count>3</Count>
-        <SuppressDialog>1</SuppressDialog>
+        <Count>0</Count>
+        <SuppressDialog>0</SuppressDialog>
     </Aliases>
 </settings>

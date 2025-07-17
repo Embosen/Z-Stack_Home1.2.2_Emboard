@@ -60,7 +60,7 @@ class TheScript
 
   // Set this variable to the COM port assigned to the target device.
 
-  private var comPort : String = "COM7";
+  private var comPort : String = "COM5";
 
 
 
@@ -167,9 +167,9 @@ class TheScript
 
 
       // Setup the device type, panId & channel mask and reset to effect the settings.
-      cfgArr[0] = 0x00;                    // Set Logical Device Type to ZC.
+      cfgArr[0] = 0x02;                    // Set Logical Device Type to End Device.
       writeCfg(comPort, 0x87, 0x01, cfgArr);
-      cfgArr[0] = 0xFF; cfgArr[1] = 0xFF;  // Set Pan Id to 0xFFFF Change this to any PAN ID you need to test
+      cfgArr[0] = 0xB1; cfgArr[1] = 0x99;  // Set Pan Id to 0x99B1 (39345)
       writeCfg(comPort, 0x83, 0x02, cfgArr);
       cfgArr[0] = 0x00; cfgArr[1] = 0x00; cfgArr[2] = 0x08; cfgArr[3] = 0x00;
                                 // Set Channel Maks to 0x00080000  // 19 - 0x13 - Current channel mask
